@@ -14,7 +14,7 @@
         <IsA>library</IsA>
         <Summary>Yara is a pattern matching swiss knife for malware researchers.</Summary>
         <Description>YARA is a tool aimed at (but not limited to) helping malware researchers to identify and classify malware samples. With YARA you can create descriptions of malware families (or whatever you want to describe) based on textual or binary patterns.This package contains python3 bindings of yara tool.</Description>
-        <Archive sha1sum="c4b4e36960922ab5b5a7bc98b6f8612af8de2d1e" type="targz">https://github.com/VirusTotal/yara-python/archive/v4.0.5.tar.gz</Archive>
+        <Archive sha1sum="d39e6f3929b4d75932a603173119e2e398da639b" type="targz">https://github.com/VirusTotal/yara-python/archive/v4.2.3.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>yara-devel</Dependency>
             <Dependency>python3-devel</Dependency>
@@ -36,6 +36,13 @@
     </Package>
 
     <History>
+        <Update release="6">
+            <Date>2022-08-25</Date>
+            <Version>4.2.3</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
         <Update release="5">
             <Date>2021-04-03</Date>
             <Version>4.0.5</Version>

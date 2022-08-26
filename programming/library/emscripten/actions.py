@@ -18,6 +18,7 @@ def setup():
     # suppress compiler warnings
     options = ''.join([
               '"-Wno-cast-qual ',
+              '-Wno-dev',
               '-Wno-array-bounds ',
               '-Wno-uninitialized ',
               '-Wno-unused-function ',

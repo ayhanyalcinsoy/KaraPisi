@@ -14,7 +14,7 @@
         <IsA>library</IsA>
         <Summary>The pattern matching swiss knife for malware researchers.</Summary>
         <Description>YARA is a tool aimed at (but not limited to) helping malware researchers to identify and classify malware samples. With YARA you can create descriptions of malware families (or whatever you want to describe) based on textual or binary patterns.</Description>
-        <Archive sha1sum="c63be65e9846314343fb3e299934ba6ea10725b3" type="targz">https://github.com/VirusTotal/yara/archive/v4.0.5.tar.gz</Archive>
+        <Archive sha1sum="1c0776d0b147e260dc51b1f2002235f07d9cacd8" type="targz">https://github.com/VirusTotal/yara/archive/v4.2.3.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>openssl-devel</Dependency>
         </BuildDependencies>
@@ -23,6 +23,10 @@
     <Package>
         <Name>yara</Name>
         <Summary>The pattern matching swiss knife for malware researchers.</Summary>
+        <RuntimeDependencies>
+            <Dependency>file</Dependency>
+            <Dependency>openssl</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="man">/usr/share/man</Path>
@@ -35,7 +39,7 @@
         <Name>yara-devel</Name>
         <Summary>Development files for yara</Summary>
         <RuntimeDependencies>
-            <Dependency>openssl</Dependency>
+            <Dependency>openssl-devel</Dependency>
             <Dependency release="current">yara</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -45,6 +49,13 @@
     </Package>
 
     <History>
+        <Update release="7">
+            <Date>2022-08-25</Date>
+            <Version>4.2.3</Version>
+            <Comment>Version bump</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
         <Update release="6">
             <Date>2021-04-03</Date>
             <Version>4.0.5</Version>

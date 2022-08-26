@@ -13,7 +13,7 @@
         <IsA>app:console</IsA>
         <Summary>Firmware analysis tool</Summary>
         <Description>Binwalk is a firmware analysis tool designed for analyzing, reverse engineering and extracting data contained in firmware images.</Description>
-        <Archive sha1sum="828e71e0a84534168f585abb6b7956435cf42acc" type="targz">https://github.com/ReFirmLabs/binwalk/archive/v2.3.1.tar.gz</Archive>
+        <Archive sha1sum="60f53c8a11f7427108627e7e51844b72e886dce5" type="targz">https://github.com/ReFirmLabs/binwalk/archive/v2.3.3.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python3-devel</Dependency>
         </BuildDependencies>
@@ -33,6 +33,13 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>2022-08-25</Date>
+            <Version>2.3.3</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
         <Update release="3">
             <Date>2021-04-05</Date>
             <Version>2.3.1</Version>

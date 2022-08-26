@@ -11,7 +11,7 @@ from pisi.actionsapi import shelltools
 
 def setup():
     shelltools.system('sed -i "/ac_cpp=/s/\$CPPFLAGS/\$CPPFLAGS -O2/" libiberty/configure')
-    autotools.autoreconf("-vif")
+    #autotools.autoreconf("-vif")
     pisitools.cflags.add("-Wno-stringop-truncation \
                           -Wno-maybe-uninitialized")
     pisitools.cxxflags.add("-Wno-maybe-uninitialized")

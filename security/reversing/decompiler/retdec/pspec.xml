@@ -23,12 +23,21 @@
             <Dependency>zlib-devel</Dependency>
             <Dependency>openssl-devel</Dependency>
             <Dependency>python3-devel</Dependency>
+            <Dependency>python3-yara</Dependency>
+            <Dependency>yara-devel</Dependency>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>python3-Pygments</Dependency>
+            <Dependency>python3-PyYAML</Dependency>
+            <Dependency>capstone-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>llvm-mlir</Dependency>
+            <Dependency>rapidjson-devel</Dependency>
+            <Dependency>jsoncpp-devel</Dependency>
         </BuildDependencies>
         <Patches>
             <!-- To avoid sandbox exceptions i patched main CMakeLists file -->
             <Patch>SCTZineCMakeListsPisiFix.patch</Patch>
-            <!-- To fix and disable libdwarf's rpath 
-            <Patch>SCT-libdwarf-CMakeLists.patch</Patch>-->
+            <Patch>4.0-system-deps.patch</Patch>
         </Patches>
     </Source>
 

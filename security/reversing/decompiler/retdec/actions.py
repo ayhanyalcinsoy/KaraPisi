@@ -12,13 +12,22 @@ from pisi.actionsapi import get
 
 shelltools.export("JOBS", get.makeJOBS().replace("-j5", "-j4"))
 
-def setup():    
+def setup():
+    shelltools.system("sed '/cond_add_subdirectory(capstone/d' -i ./deps/CMakeLists.txt")
+    shelltools.system("sed '/cond_add_subdirectory(keystone/d' -i ./deps/CMakeLists.txt")
+    shelltools.system("sed '/cond_add_subdirectory(llvm/d' -i ./deps/CMakeLists.txt")
+    shelltools.system("sed '/cond_add_subdirectory(rapidjson/d' -i ./deps/CMakeLists.txt")
+    shelltools.system("sed '/cond_add_subdirectory(tinyxml2/d' -i ./deps/CMakeLists.txt")
+    shelltools.system("sed '/cond_add_subdirectory(openssl/d' -i ./deps/CMakeLists.txt")
+    #shelltools.system("sed '/cond_add_subdirectory(yara/d' -i ./deps/CMakeLists.txt")
+    #shelltools.system("sed '/cond_add_subdirectory(yaramod/d' -i ./deps/CMakeLists.txt")
+    shelltools.system('sed "s|get_install_path(sys.argv)| \"${D}\" + get_install_path(sys.argv)|g" -i ./support/install-share.py')
+    #shelltools.system('sed "s|output = os.path.join|output = \"${D}\" + os.path.join|g" -i ./support/install-yara.py')
     shelltools.makedirs("build")
     shelltools.cd("build")
-    cmaketools.configure("-DCMAKE_SKIP_RPATH=True \
-                          -DCMAKE_INSTALL_PREFIX=/usr" \
+    cmaketools.configure("-DCMAKE_INSTALL_PREFIX=/usr" \
                           , sourceDir="..")
-
+#-DCMAKE_SKIP_RPATH=True \
 def build():
     shelltools.cd("build")
     autotools.make()

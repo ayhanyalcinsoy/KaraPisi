@@ -12,7 +12,7 @@
         <License>GPL</License>
         <Summary>A Password Recovery Tool for PDF-files</Summary>
         <Description>PDFCrack is a GNU/Linux (other POSIX-compatible systems should work too) tool for recovering passwords and content from PDF-files. It is small, command line driven without external dependencies.</Description>
-        <Archive sha1sum="a82f108ee441a1ea13781fd41dca58a486d395bd" type="targz">mirrors://sourceforge/pdfcrack/pdfcrack/pdfcrack-0.15/pdfcrack-0.19.tar.gz</Archive>
+        <Archive sha1sum="a82f108ee441a1ea13781fd41dca58a486d395bd" type="targz">mirrors://sourceforge/pdfcrack/pdfcrack/pdfcrack-0.19/pdfcrack-0.19.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -29,6 +29,13 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>2022-08-26</Date>
+            <Version>0.19</Version>
+            <Comment>fixed url</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
         <Update release="3">
             <Date>2020-04-28</Date>
             <Version>0.19</Version>

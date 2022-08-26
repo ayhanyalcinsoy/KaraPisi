@@ -13,7 +13,7 @@
         <IsA>app::console</IsA>
         <Summary>The GNU Debugger for all gdb supported architectures (i386/arm/mips...).</Summary>
         <Description>gdb-multiarch, is a split of GDB(GNU Debugger) which is for gdb supported architectures (i386/arm/mips...).</Description>
-        <Archive sha1sum="356ee474a24bfb2f133894730916557dfea9da2e" type="tarxz">https://ftp.gnu.org/gnu/gdb/gdb-9.2.tar.xz</Archive>
+        <Archive sha1sum="2edabd9f5766b84889b07b366b4438e93e994005" type="tarxz">https://ftp.gnu.org/gnu/gdb/gdb-12.1.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>texinfo</Dependency>
             <Dependency>xz-devel</Dependency>
@@ -24,6 +24,7 @@
             <Dependency>ncurses-devel</Dependency>
             <Dependency>guile2.0-devel</Dependency>
             <Dependency>readline-devel</Dependency>
+            <Dependency>mit-kerberos-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -31,11 +32,15 @@
         <Name>gdb-multiarch</Name>
         <Summary>The GNU Debugger for all gdb supported architectures (i386/arm/mips...).</Summary>
         <RuntimeDependencies>
-            <Dependency>gdb</Dependency>
+            <Dependency>xz</Dependency>
+            <Dependency>gmp</Dependency>
             <Dependency>mpfr</Dependency>
             <Dependency>expat</Dependency>
+            <Dependency>libgcc</Dependency>
             <Dependency>python</Dependency>
+            <Dependency>ncurses</Dependency>
             <Dependency>guile2.0</Dependency>
+            <Dependency>readline</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/gdb-multiarch</Path>
@@ -43,6 +48,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2022-08-24</Date>
+            <Version>12.1</Version>
+            <Comment>Version bump</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
         <Update release="1">
             <Date>2020-04-09</Date>
             <Version>9.2</Version>

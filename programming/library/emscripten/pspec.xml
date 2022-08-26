@@ -12,8 +12,8 @@
         <License>MIT</License>
         <Summary>Compile C and C++ into highly-optimizable JavaScript for the web</Summary>
         <Description>Emscripten is a toolchain for compiling to asm.js and WebAssembly, built using LLVM, that lets you run C and C++ on the web at near-native speed without plugins.</Description>
-        <Archive sha1sum="0a8fc346052c034b5d6ef346d11cdc7fe1045beb" type="targz">https://github.com/emscripten-core/emscripten/archive/2.0.17.tar.gz</Archive>
-        <Archive sha1sum="842d2e18633d27261100cbdef90e7f1840068bbc" type="targz" target="emscripten-2.0.17">https://github.com/llvm/llvm-project/archive/llvmorg-12.0.0.tar.gz</Archive>
+        <Archive sha1sum="720e0be28db6896b9a8639eac8eb627516513e40" type="targz">https://github.com/emscripten-core/emscripten/archive/3.1.20.tar.gz</Archive>
+        <Archive sha1sum="842d2e18633d27261100cbdef90e7f1840068bbc" type="targz" target="emscripten-3.1.20">https://github.com/llvm/llvm-project/archive/llvmorg-12.0.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>git</Dependency>
             <Dependency>cmake</Dependency>
@@ -67,6 +67,13 @@
     </Package>
     -->
     <History>
+        <Update release="3">
+            <Date>2022-08-25</Date>
+            <Version>3.1.20</Version>
+            <Comment>Version bump</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
         <Update release="2">
             <Date>2021-04-16</Date>
             <Version>2.0.14</Version>
